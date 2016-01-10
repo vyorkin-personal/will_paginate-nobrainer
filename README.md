@@ -1,36 +1,22 @@
-# WillPaginate::Nobrainer
+# NoBrainer will_paginate adapter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/will_paginate/nobrainer`. To experiment with that code, run `bin/console` for an interactive prompt.
+will_paginate-nobrainer is an adapter to make [will_paginate](https://github.com/mislav/will_paginate) work nicely with [NoBrainer](https://github.com/nviennot/nobrainer).
 
-TODO: Delete this and the text above, and describe your gem
+Example adapters:
+* [data mapper](https://github.com/mislav/will_paginate/blob/master/lib/will_paginate/data_mapper.rb)
+* [active record](https://github.com/mislav/will_paginate/blob/master/lib/will_paginate/active_record.rb)
+* [mogoid](https://github.com/mislav/will_paginate/blob/master/lib/will_paginate/mongoid.rb)
 
-## Installation
+# Installation
 
-Add this line to your application's Gemfile:
+Include in your Gemfile:
 
 ```ruby
 gem 'will_paginate-nobrainer'
 ```
 
-And then execute:
+Use kaminari as usual.
 
-    $ bundle
+# License
 
-Or install it yourself as:
-
-    $ gem install will_paginate-nobrainer
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/will_paginate-nobrainer.
-
+MIT license.

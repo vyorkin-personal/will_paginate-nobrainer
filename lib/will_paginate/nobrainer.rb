@@ -1,7 +1,3 @@
-require "will_paginate/nobrainer/version"
-
-module WillPaginate
-  module Nobrainer
-    # Your code goes here...
-  end
-end
+require 'nobrainer'
+require 'will_paginate'
+require 'will_paginate/nobrainer/version'
