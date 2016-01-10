@@ -15,7 +15,7 @@ Include in your Gemfile:
 gem 'will_paginate-nobrainer'
 ```
 
-Use kaminari as usual.
+Use will_paginate as usual.
 
 # License
 

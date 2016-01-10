@@ -10,7 +10,7 @@ SPEC_ROOT = File.expand_path File.dirname(__FILE__)
 Dir["#{SPEC_ROOT}/support/**/*.rb"].each { |f| require f unless File.basename(f) =~ /^_/ }
 
 NoBrainer.configure do |config|
-  config.app_name = :kaminari
+  config.app_name = :will_paginate
   config.environment = :test
 end
 
