@@ -89,7 +89,7 @@ RSpec.configure do |config|
   # be too noisy due to issues in dependencies.
   # config.warnings = true
 
-  config.fail_fast = true
+  config.fail_fast = false
 
   # Many RSpec users commonly either run the entire suite or an individual
   # file, and it's useful to allow more verbose output when running an
