@@ -1,4 +1,3 @@
-require 'will_paginate/collection'
 require 'will_paginate/nobrainer/collection_methods'
 
 module WillPaginate
@@ -10,15 +9,19 @@ module WillPaginate
       # Requred methods for will_paginate.
       module ClassMethods
         def paginate(options = {})
-          extend CollectionMethods
-
-          @current_page = WillPaginate::PageNumber(options[:page] || @current_page || 1)
-          @page_multiplier = current_page - 1
+          current_page = WillPaginate::PageNumber(options[:page] || 1)
           pp = (options[:per_page] || WillPaginate.per_page).to_i
-          limit(pp).skip(@page_multiplier * pp).extend(CollectionMethods)
+
+          rel = limit(pp).skip((current_page - 1) * pp).extend(CollectionMethods)
+
+          rel.current_page = current_page
+          rel.page_multiplier = current_page - 1
+          rel.per_page = pp
+
+          rel
         end
 
-        def per_page(value = nil)
+        def per_page(value)
           limit(value)
         end
 

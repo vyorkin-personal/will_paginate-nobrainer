@@ -1,12 +1,18 @@
+require 'will_paginate/collection'
+
 module WillPaginate
   module NoBrainer
     # Collection methods.
     module CollectionMethods
-      attr_reader :current_page
+      extend ActiveSupport::Concern
+      include WillPaginate::CollectionMethods
+
+      attr_accessor :current_page
+      attr_accessor :per_page
+      attr_accessor :page_multiplier
 
       def total_entries
-        @total_entries ||= count
-        # @total_entries ||= skip(nil).limit(nil).count
+        @total_entrie ||= self.skip(nil).limit(nil).count
       end
 
       def total_pages
@@ -14,7 +20,7 @@ module WillPaginate
       end
 
       def offset
-        @page_multiplier * per_page
+        page_multiplier * per_page
       end
     end
   end
