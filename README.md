@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/vyorkin-personal/will_paginate-nobrainer.svg)](https://travis-ci.org/vyorkin-personal/will_paginate-nobrainer)
-
 # NoBrainer will_paginate adapter
 
 will_paginate-nobrainer is an adapter to make [will_paginate](https://github.com/mislav/will_paginate) work nicely with [NoBrainer](https://github.com/nviennot/nobrainer).
